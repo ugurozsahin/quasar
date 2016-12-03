@@ -1,0 +1,57 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <!-- The identifier that must be unique within the hosting gallery -->
+    <id>Quasar.Collections.Paging</id>
+
+    <!-- The package version number that is used when resolving dependencies -->
+    <version>0.1.0.0</version>
+
+    <!-- Authors contain text that appears directly on the gallery -->
+    <authors>Uğur Özşahin</authors>
+
+    <!-- Owners are typically nuget.org identities that allow gallery 
+         users to earily find other packages by the same owners.  -->
+    <owners>ugurozsahin</owners>
+
+    <!-- License and project URLs provide links for the gallery -->
+    <licenseUrl>https://raw.githubusercontent.com/ugurozsahin/quasar/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ugurozsahin/quasar</projectUrl>
+
+    <!-- The icon is used in Visual Studio's package manager UI -->
+    <iconUrl>https://raw.githubusercontent.com/ugurozsahin/quasar/master/quasar.png</iconUrl>
+
+    <!-- If true, this value prompts the user to accept the license when
+         installing the package. -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <!-- Any details about this particular release -->
+    <releaseNotes>
+      .Net Core Paging For IEnumerable Objects
+    </releaseNotes>
+
+    <title>Quasar Collections Paging</title>
+
+    <!-- The description can be used in package manager UI. Note that the 
+         nuget.org gallery uses information you add in the portal. -->
+    <description>.Net Core Paging For IEnumerable Objects</description>
+
+    <!-- Copyright information -->
+    <copyright>Copyright ©2016 Inobil</copyright>
+
+    <!-- Tags appear in the gallery and can be used for tag searches -->
+    <tags>paging collections page dotnetcore core .net</tags>
+
+    <!-- Dependencies are automatically installed when the package is installed -->
+    <!--<dependencies>
+      <dependency id="log4net" version="2.0.5" />
+    </dependencies>-->
+  </metadata>
+
+  <!-- A readme.txt will be displayed when the package is installed -->
+  <files>
+    <!-- Include everything in \bin -->
+    <file src="\bin" target="lib" />
+    <file src="README.md" target="" />
+  </files>
+</package>
