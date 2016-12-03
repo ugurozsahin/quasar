@@ -11,7 +11,7 @@ init:
 
 assembly_info:
   patch: true
-  file: '**Quasar.Collections.Paging\Properties\AssemblyInfo.*'
+  file: '**\AssemblyInfo.*'
   assembly_version: '$(buildVersion)'
   assembly_file_version: '$(buildVersion)'
   assembly_informational_version: '$(nugetVersion)'
@@ -30,10 +30,10 @@ build:
   verbosity: minimal
 
 after_build:
-- ps: nuget pack "$env:projectPath\Package.nuspec" -version "$env:nugetVersion"
+- ps: nuget pack "\Package.nuspec" -version "$env:nugetVersion"
 
 artifacts:
-- path: '$env:projectPath\bin\*.nupkg'
+- path: '**\*.nupkg'
   name: nuget-package
 
 deploy:
