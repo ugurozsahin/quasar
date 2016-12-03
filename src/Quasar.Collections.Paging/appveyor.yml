@@ -11,7 +11,7 @@ init:
 
 assembly_info:
   patch: true
-  file: '**\AssemblyInfo.*'
+  file: '**$(projectPath)*\AssemblyInfo.*'
   assembly_version: '$(buildVersion)'
   assembly_file_version: '$(buildVersion)'
   assembly_informational_version: '$(nugetVersion)'
@@ -33,7 +33,7 @@ after_build:
 - ps: nuget pack "$env:projectPath\Package.nuspec" -version "$env:nugetVersion"
 
 artifacts:
-- path: '**\*.nupkg'
+- path: '**$(projectPath)*\*.nupkg'
   name: nuget-package
 
 deploy:
