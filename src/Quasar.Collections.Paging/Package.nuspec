@@ -51,7 +51,7 @@
   <!-- A readme.txt will be displayed when the package is installed -->
   <files>
     <!-- Include everything in \bin -->
-    <file src="\bin" target="lib" />
+    <file src="src\Quasar.Collections.Paging\bin" target="lib" />
     <file src="README.md" target="" />
   </files>
 </package>
