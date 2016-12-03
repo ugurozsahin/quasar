@@ -4,14 +4,14 @@ environment:
   packageVersion: 0.1.0
 
 init:
-- ps: $env:projectPath = "C:\projects\quasar\\src\Quasar.Collections.Paging"
+- ps: $env:projectPath = "C:\projects\quasar\src\Quasar.Collections.Paging"
 - ps: $env:buildVersion = "$env:packageVersion.$env:appveyor_build_number"
 - ps: $env:nugetVersion = "$env:packageVersion.$env:appveyor_build_number"
 - ps: Update-AppveyorBuild -Version $env:buildVersion
 
 assembly_info:
   patch: true
-  file: '**Quasar.Collections.Paging*\AssemblyInfo.*'
+  file: '$env:projectPath\Properties\AssemblyInfo.*'
   assembly_version: '$(buildVersion)'
   assembly_file_version: '$(buildVersion)'
   assembly_informational_version: '$(nugetVersion)'
@@ -30,10 +30,10 @@ build:
   verbosity: minimal
 
 after_build:
-- ps: nuget pack $env:projectPath\Package.nuspec -version "$env:nugetVersion"
+- ps: nuget pack "$env:projectPath\Package.nuspec" -version "$env:nugetVersion"
 
 artifacts:
-- path: 'Quasar.Collections.Paging*.nupkg'
+- path: '$env:projectPath\bin\*.nupkg'
   name: nuget-package
 
 deploy:
