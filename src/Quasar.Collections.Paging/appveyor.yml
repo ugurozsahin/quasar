@@ -17,7 +17,7 @@ init:
 
 assembly_info:
   patch: true
-  file: $(projectPath)\Properties\AssemblyInfo.cs
+  file: .\src\Quasar.Collections.Paging\Properties\AssemblyInfo.cs
   assembly_version: '$(buildVersion)'
   assembly_file_version: '$(buildVersion)'
   assembly_informational_version: '$(nugetVersion)'
@@ -44,7 +44,7 @@ build:
 #- ps: nuget pack "$env:projectPath\Package.nuspec" -version "$env:nugetVersion"
 
 after_build:
-- ps: dotnet pack $env:projectPath -c $env:CONFIGURATION -o .\artifacts --version-suffix=$env:buildVersion
+- ps: dotnet pack $env:projectPath -c $env:CONFIGURATION -o .\artifacts #--version-suffix=$env:buildVersion
 
 artifacts:
 - path: .\artifacts\**\*.nupkg
@@ -52,6 +52,7 @@ artifacts:
 
 deploy:
 - provider: NuGet
+  skip_symbols: true
   api_key:
     secure: iRgJLbvGvLEZPi7paKqFfCzmQ65VgpXKhL+7RU0e/OnL2/pOD9K2hi0qvleV2lKf
   artifact: nuget-package
