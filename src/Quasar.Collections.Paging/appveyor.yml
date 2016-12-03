@@ -1,7 +1,7 @@
-version: 0.1.0.{build}
+version: 0.9.0.{build}
 
 environment:
-  packageVersion: 0.1.0
+  packageVersion: 0.9.0
 
 init:
 - ps: $env:projectPath = "src\Quasar.Collections.Paging"
@@ -11,7 +11,7 @@ init:
 
 assembly_info:
   patch: true
-  file: '**Quasar.Collections.Paging**\AssemblyInfo.*'
+  file: '**Quasar.Collections.Paging\Properties\AssemblyInfo.*'
   assembly_version: '$(buildVersion)'
   assembly_file_version: '$(buildVersion)'
   assembly_informational_version: '$(nugetVersion)'
