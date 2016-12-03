@@ -33,7 +33,7 @@ build:
 #- ps: nuget pack "$env:projectPath\Package.nuspec" -version "$env:nugetVersion"
 
 artifacts:
-- path: '**Quasar.Collections.Paging.1.0.0.nupkg'
+- path: 'src\Quasar.Collections.Paging\bin\Release\Quasar.Collections.Paging.1.0.0.nupkg'
   name: nuget-package
 
 deploy:
