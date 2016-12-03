@@ -13,6 +13,7 @@ init:
 - ps: $env:projectPath = ".\src\Quasar.Collections.Paging"
 - ps: $env:buildVersion = "$env:packageVersion.$env:appveyor_build_number"
 - ps: $env:nugetVersion = "$env:packageVersion.$env:appveyor_build_number"
+- ps: $env:versionSuffix = "rc$env:appveyor_build_number"
 - ps: Update-AppveyorBuild -Version $env:buildVersion
 #- ps: $Env:DOTNET_BUILD_VERSION = "0.9.$Env:APPVEYOR_BUILD_NUMBER-CI"
 #- ps: $Env:DOTNET_ASSEMBLY_FILE_VERSION = "0.9.$Env:APPVEYOR_BUILD_NUMBER"
@@ -46,7 +47,7 @@ build:
 #- ps: nuget pack "$env:projectPath\Package.nuspec" -version "$env:nugetVersion"
 
 after_build:
-- ps: dotnet pack $env:projectPath -c $env:CONFIGURATION -o .\artifacts --version-suffix=$env:buildVersion
+- ps: dotnet pack $env:projectPath -c $env:CONFIGURATION -o .\artifacts --version-suffix=$env:versionSuffix
 
 artifacts:
 - path: .\artifacts\**\*.nupkg
