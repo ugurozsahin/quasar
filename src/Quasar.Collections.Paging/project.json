@@ -1,10 +1,10 @@
 ﻿{
+  "version": "0.9.0-*",
   "name": "Quasar.Collections.Paging",
   "title": "Quasar Collections Paging",
   "copyright": "Copyright ©2016 Inobil",
   "description": ".Net Core Paging For IEnumerable Objects",
   "authors": [ "Uğur Özşahin" ],
-  "version": "0.9.0.*",
 
   "packOptions": {
     "iconUrl": "",
