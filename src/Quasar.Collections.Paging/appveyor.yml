@@ -17,7 +17,7 @@ init:
 
 assembly_info:
   patch: true
-  file: .\$env:projectPath\**\AssemblyInfo.*
+  file: '$(projectPath)\**\AssemblyInfo.*'
   assembly_version: '$(buildVersion)'
   assembly_file_version: '$(buildVersion)'
   assembly_informational_version: '$(nugetVersion)'
