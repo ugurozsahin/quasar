@@ -1,5 +1,20 @@
 ﻿{
-  "version": "1.0.0-*",
+  "name": "Quasar.Collections.Paging",
+  "title": "Quasar Collections Paging",
+  "copyright": "Copyright ©2016 Inobil",
+  "description": ".Net Core Paging For IEnumerable Objects",
+  "authors": [ "Uğur Özşahin" ],
+  "version": "0.9.0-*",
+
+  "packOptions": {
+    "iconUrl": "",
+    "licenseUrl": "https://raw.githubusercontent.com/ugurozsahin/quasar/master/LICENSE",
+    "owners": [ "ugurozsahin" ],
+    "projectUrl": "https://github.com/ugurozsahin/quasar",
+    "releaseNotes": ".Net Core Paging For IEnumerable Objects",
+    "summary": ".Net Core Paging For IEnumerable Objects",
+    "tags": [ "paging", "collections", "page", "dotnetcore", "core", ".net" ]
+  },
 
   "dependencies": {
     "NETStandard.Library": "1.6.0"

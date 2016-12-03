@@ -3,6 +3,12 @@ version: 0.9.0.{build}
 environment:
   packageVersion: 0.9.0
 
+pull_requests:  
+  do_not_increment_build_number: true
+branches:  
+  only:
+  - master
+
 init:
 - ps: $env:projectPath = "src\Quasar.Collections.Paging"
 - ps: $env:buildVersion = "$env:packageVersion.$env:appveyor_build_number"
@@ -23,6 +29,11 @@ nuget:
   project_feed: true
   disable_publish_on_pr: true
 
+#build_script:  
+#- ps: $env:projectPath\Build.ps1
+
+test: off
+
 before_build:
 - nuget restore
 
@@ -33,7 +44,7 @@ build:
 #- ps: nuget pack "$env:projectPath\Package.nuspec" -version "$env:nugetVersion"
 
 artifacts:
-- path: 'src\Quasar.Collections.Paging\bin\Release\Quasar.Collections.Paging.1.0.0.nupkg'
+- path: .\Quasar.Collections.Paging\**\*.nupkg #'src\Quasar.Collections.Paging\bin\Release\Quasar.Collections.Paging.1.0.0.nupkg'
   name: nuget-package
 
 deploy:
