@@ -4,7 +4,7 @@
   "copyright": "Copyright ©2016 Inobil",
   "description": ".Net Core Paging For IEnumerable Objects",
   "authors": [ "Uğur Özşahin" ],
-  "version": "0.9.0-*",
+  "version": "0.9.0.*",
 
   "packOptions": {
     "iconUrl": "",
