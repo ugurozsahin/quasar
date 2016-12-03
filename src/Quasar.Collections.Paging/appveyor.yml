@@ -43,7 +43,7 @@ build:
 #after_build:
 #- ps: nuget pack "$env:projectPath\Package.nuspec" -version "$env:nugetVersion"
 
-after-build:
+after_build:
 - ps: dotnet pack .\src\Quasar.Collections.Paging -c $env:CONFIGURATION -o .\artifacts --version-suffix=$env:APPVEYOR_BUILD_NUMBER
 
 artifacts:
