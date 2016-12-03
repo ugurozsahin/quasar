@@ -6,9 +6,13 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Inobil")]
 [assembly: AssemblyProduct("Quasar.Collections.Paging")]
 [assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright ©2016 Inobil")]
+[assembly: AssemblyDescription(".Net Core Paging For IEnumerable Objects")]
+[assembly: AssemblyTitle("Quasar Collections Paging")]
+[assembly: AssemblyVersion("0.9.0.0")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
