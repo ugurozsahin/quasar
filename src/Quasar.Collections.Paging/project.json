@@ -1,4 +1,5 @@
 ﻿{
+  "version": "0.9.0-*",
   "name": "Quasar.Collections.Paging",
   "title": "Quasar Collections Paging",
   "copyright": "Copyright ©2016 Inobil",

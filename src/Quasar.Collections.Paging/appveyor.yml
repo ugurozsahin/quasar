@@ -14,8 +14,8 @@ init:
 - ps: $env:buildVersion = "$env:packageVersion.$env:appveyor_build_number"
 - ps: $env:nugetVersion = "$env:packageVersion.$env:appveyor_build_number"
 - ps: Update-AppveyorBuild -Version $env:buildVersion
-- ps: $Env:DOTNET_BUILD_VERSION = "0.9.$Env:APPVEYOR_BUILD_NUMBER-CI"
-- ps: $Env:DOTNET_ASSEMBLY_FILE_VERSION = "0.9.$Env:APPVEYOR_BUILD_NUMBER"
+#- ps: $Env:DOTNET_BUILD_VERSION = "0.9.$Env:APPVEYOR_BUILD_NUMBER-CI"
+#- ps: $Env:DOTNET_ASSEMBLY_FILE_VERSION = "0.9.$Env:APPVEYOR_BUILD_NUMBER"
 
 assembly_info:
   patch: true
