@@ -44,7 +44,7 @@ build:
 #- ps: nuget pack "$env:projectPath\Package.nuspec" -version "$env:nugetVersion"
 
 after_build:
-- ps: dotnet pack $env:projectPath -c $env:CONFIGURATION -o .\artifacts --version-suffix=$env:APPVEYOR_BUILD_NUMBER
+- ps: dotnet pack $env:projectPath -c $env:CONFIGURATION -o .\artifacts --version-suffix=$env:buildVersion
 
 artifacts:
 - path: .\artifacts\**\*.nupkg
