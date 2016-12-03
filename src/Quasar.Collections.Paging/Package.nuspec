@@ -43,15 +43,15 @@
     <tags>paging collections page dotnetcore core .net</tags>
 
     <!-- Dependencies are automatically installed when the package is installed -->
-    <!--<dependencies>
-      <dependency id="log4net" version="2.0.5" />
-    </dependencies>-->
+    <dependencies>
+      <dependency id="NETStandard.Library" version="1.6.0" />
+    </dependencies>
   </metadata>
 
   <!-- A readme.txt will be displayed when the package is installed -->
   <files>
     <!-- Include everything in \bin -->
-    <file src="/bin/" target="lib" />
+    <file src="/bin/Release/" target="lib" />
     <file src="README.md" target="" />
   </files>
 </package>
